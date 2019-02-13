@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TestSystem</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="/lib/css/test_system.css">
+</head>
+<body>
+<div class="container">
+<h1>Test System</h1>
+    <hr>
+    <div class="row">
+        <form class="form-inline">
+            <div class="form-group mb-2">
+                <label for="min_difficulty" class="sr-only">Min difficulty</label>
+                <input type="text" class="form-control form-control-sm" id="min_difficulty" placeholder="Min difficulty">
+            </div>
+            <div class="form-group mb-2 mx-sm-3">
+                <label for="max_difficulty" class="sr-only">Max difficulty</label>
+                <input type="text" class="form-control form-control-sm" id="max_difficulty" placeholder="Max difficulty">
+            </div>
+            <button type="button" class="btn btn-primary mb-2 btn-sm" id="generate_table">Generate Table</button>
+        </form>
+    </div>
+    <hr>
+    <div class="row">
+        <form class="form-inline">
+            <div class="form-group mb-2">
+                <label for="min_difficulty" class="sr-only">User intelligence</label>
+                <input type="text" class="form-control form-control-sm" id="user_intelligence" placeholder="User intelligence">
+            </div>
+            <button type="button" class="btn btn-primary mb-2 btn-sm mx-sm-3" id="emulate_test">Emulate test</button>
+        </form>
+    </div>
+    <hr>
+    <h2 id="test_result">Result: </h2>
+    <table class="table table-hover" id="test_details">
+        <thead>
+        <tr>
+            <th>№</th>
+            <th>Question ID</th>
+            <th>Tests count</th>
+            <th>Question difficult</th>
+            <th>Right answer</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="modal_report" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_title">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal_body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/lib/js/test_system.js"></script>
+</body>
+</html>
